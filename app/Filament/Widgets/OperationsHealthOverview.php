@@ -10,6 +10,10 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 
 class OperationsHealthOverview extends StatsOverviewWidget
 {
+    protected static bool $isLazy = false;
+
+    protected static ?int $sort = -9;
+
     protected ?string $heading = 'Operations Health';
 
     protected ?string $description = 'Доступность операторов и состояние очереди доставки в телефонию.';

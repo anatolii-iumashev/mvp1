@@ -8,6 +8,10 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 
 class CallFlowOverview extends StatsOverviewWidget
 {
+    protected static bool $isLazy = false;
+
+    protected static ?int $sort = -10;
+
     protected ?string $heading = 'Call Flow';
 
     protected ?string $description = 'Текущий backlog и движение звонков через назначение и dispatch.';
