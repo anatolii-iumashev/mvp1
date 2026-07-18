@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'telephony' => [
+        'base_url' => env('TELEPHONY_BASE_URL'),
+        'timeout' => env('TELEPHONY_TIMEOUT', 10),
+    ],
+
 ];
