@@ -10,7 +10,7 @@ NPM := npm
 
 help:
 	@echo "Available targets:"
-	@echo "  make setup    - Install dependencies, prepare .env, migrate, and build assets"
+	@echo "  make setup    - Install dependencies, prepare .env, migrate, seed, and build assets"
 	@echo "  make dev      - Run the full local dev stack"
 	@echo "  make serve    - Start the Laravel HTTP server"
 	@echo "  make queue    - Start the queue worker"
@@ -30,6 +30,7 @@ setup:
 	@if [ ! -f .env ]; then cp .env.example .env; fi
 	$(PHP) artisan key:generate
 	$(PHP) artisan migrate --force
+	$(PHP) artisan db:seed --force
 	$(NPM) install --ignore-scripts
 	$(NPM) run build
 

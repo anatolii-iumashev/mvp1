@@ -2,6 +2,16 @@
 
 Стек и конвенции в этом репозитории: Laravel как backend-основа, Filament как админ-контур.
 
+## Filament login
+
+После `make setup` в проекте создается пользователь для входа в Filament:
+
+- URL: `/admin/login`
+- Username: `test@example.com`
+- Password: `password`
+
+Если нужно пересоздать пользователя вручную, запусти `php artisan db:seed` или `make seed`.
+
 ---
 
 ## 1) Ключевые требования и допущения
