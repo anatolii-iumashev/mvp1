@@ -6,7 +6,7 @@
 
 После `make setup` в проекте создается пользователь для входа в Filament:
 
-- URL: `/admin/login`
+- URL: `/login`
 - Username: `test@example.com`
 - Password: `password`
 
