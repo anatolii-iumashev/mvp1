@@ -12,6 +12,8 @@ class DashboardWidgetsTest extends TestCase
 
     public function test_dashboard_displays_operational_metric_widgets_for_authenticated_users(): void
     {
+        config(['app.env' => 'local']);
+
         $user = User::factory()->create();
 
         $response = $this->actingAs($user)->get('/');
