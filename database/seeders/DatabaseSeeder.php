@@ -24,5 +24,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'password' => Hash::make('password'),
         ]);
+
+        $this->call(CallCenterDemoSeeder::class);
     }
 }
