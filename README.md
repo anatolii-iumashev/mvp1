@@ -2,6 +2,42 @@
 
 Стек и конвенции в этом репозитории: Laravel как backend-основа, Filament как админ-контур.
 
+
+## Getting started
+
+Требования:
+
+- PHP 8.3+
+- Composer
+- Node.js 20+
+- npm
+- Локальная БД (настрой в `.env`)
+
+Быстрый старт:
+
+```bash
+make setup
+make dev
+```
+
+Что делает `make setup`:
+
+- ставит PHP-зависимости (`composer install`)
+- создает `.env` из `.env.example` (если файла нет)
+- генерирует app key
+- запускает миграции и сиды
+- ставит npm-зависимости и собирает фронт
+
+После запуска `make dev` поднимается локальный стек разработки.
+
+Если хочешь запускать процессы отдельно:
+
+```bash
+make serve   # Laravel HTTP server
+make queue   # Queue worker
+make vite    # Vite dev server
+```
+
 ## Filament login
 
 После `make setup` в проекте создается пользователь для входа в Filament:
