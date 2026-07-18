@@ -22,6 +22,7 @@ class DashboardWidgetsTest extends TestCase
             ->assertOk()
             ->assertSee('Call Flow')
             ->assertSee('Operations Health')
+            ->assertSee('Привет! это заголовок')
             ->assertDontSee('Documentation')
             ->assertDontSee('GitHub');
     }
